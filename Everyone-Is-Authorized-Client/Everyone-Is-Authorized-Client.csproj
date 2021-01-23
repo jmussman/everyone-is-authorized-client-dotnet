@@ -3,26 +3,21 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <RootNamespace>com.everyoneisauthorized.client</RootNamespace>
-    <ReleaseVersion>1.0.0</ReleaseVersion>
+    <ReleaseVersion>1.0.3</ReleaseVersion>
     <PackageId>EveryoneIsAuthorized.Client</PackageId>
     <Authors>Joel Mussman</Authors>
-    <Description>This library provides a credit card purchase payment authorizer that randomly decides (50/50). The class will only
-This library provides a credit card purchase payment authorizer that authorizes a payment 100% of the time, but
-only if the credit card number is a valid card number. If the class constructor is called without arguments
-it instantiates its own CreditCardValidator. If it is called with an ICardValidator instance it uses it. This allows for
-a demonstration of dependcy injection.
+    <Description>This library provides a credit card purchase payment authorizer that authorizes a payment 100% of the time, but only if the credit card number is a valid card number. If the class constructor is called without arguments it instantiates its own ICreditCardValidator. If it is called with an ICardValidator instance then it uses that. This scenario allows for a demonstration of dependcy injection without involving any other components.
 
-Paired with the sister The Bank of Random Credit Authorizer both libraries create a scenario to demonstrate the problems
-of tightly coupling a class to a dependency, and using dependency injection and the Adapter Pattern to
-decouple the dependency and allow for test-doubles to be injected in their place.</Description>
+When paired with the sister project The Bank of Random Credit Authorizer both libraries may be used to create a scenario to demonstrate the problems of a tightly coupled dependency in a SalesOrderManager class. Use this to demonstrate dependency injection and the Adapter Pattern to decouple the authorization from the SalesOrderManager, and then allow for a test-double to be injected in their place.  To setup this scenario use the default constructor for each class and ignore the internal card validation. In a real application the classes would not share the same validator interface, they only do in these libraries to help in the first scenario. </Description>
     <Copyright>Copyright © 2018-2021 Joel Mussman. All rights reserved.</Copyright>
-    <PackageIconUrl>https://github.com/jmussman/everyone-is-authorized-client-dotnet/logo.png</PackageIconUrl>
-    <PackageLicenseUrl>https://github.com/jmussman/everyone-is-authorized-client-dotnet/LICENSE.md</PackageLicenseUrl>
+    <PackageIconUrl>https://raw.githubusercontent.com/jmussman/everyone-is-authorized-client-dotnet/master/logo.png</PackageIconUrl>
+    <PackageLicenseUrl>https://github.com/jmussman/everyone-is-authorized-client-dotnet/blob/master/LICENSE.md</PackageLicenseUrl>
     <Owners>Joel Mussman</Owners>
     <PackageProjectUrl>https://github.com/jmussman/everyone-is-authorized-client-dotnet</PackageProjectUrl>
-    <PackageReleaseNotes>Initial release.</PackageReleaseNotes>
+    <PackageReleaseNotes>Updated description.</PackageReleaseNotes>
     <Summary>A payment authorizer that authorizes 100% of the time.</Summary>
     <Title>Everyone Is Authorized Client</Title>
+    <PackageVersion>1.0.3</PackageVersion>
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -37,6 +32,11 @@ decouple the dependency and allow for test-doubles to be injected in their place
           <type>AfterBuild</type>
           <command>cp Everyone-Is-Authorized-Client.md "${SolutionDir}/docs/index.md"</command>
           <workingdir>${TargetDir}</workingdir>
+        </Command>
+        <Command>
+          <type>AfterClean</type>
+          <command>rm -rf "${ProjectDir}/bin/Release"</command>
+          <workingdir></workingdir>
         </Command>
       </CustomCommands>
     </CustomCommands>
