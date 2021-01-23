@@ -31,12 +31,24 @@ decouple the dependency and allow for test-doubles to be injected in their place
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType></DebugType>
     <DocumentationFile>bin\Release\netcoreapp3.1\Everyone-Is-Authorized-Client.xml</DocumentationFile>
-    <DelaySign>false</DelaySign>
+    <CustomCommands>
+      <CustomCommands>
+        <Command>
+          <type>AfterBuild</type>
+          <command>cp Everyone-Is-Authorized-Client.md "${SolutionDir}/docs/index.md"</command>
+          <workingdir>${TargetDir}</workingdir>
+        </Command>
+      </CustomCommands>
+    </CustomCommands>
   </PropertyGroup>
   <ItemGroup>
     <Folder Include="Client\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="WonderfulWidgets.CreditCardValidator" Version="1.0.0" />
+    <PackageReference Include="Vsxmd" Version="1.4.5">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
   </ItemGroup>
 </Project>
