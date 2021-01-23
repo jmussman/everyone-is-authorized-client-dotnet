@@ -28,7 +28,7 @@ The library code targets .NET Core 3.1. The unit tests are built with xUnit.
 
 ### Documentation
 
-Read the JavaDoc at https://jmussman.github.io/everyone-is-authorized-client-dotnet/.
+Read the library documentation at https://jmussman.github.io/everyone-is-authorized-client-dotnet/.
 
 <hr>
 Copyright © 2018-2021 Joel Mussman. All rights reserved.
