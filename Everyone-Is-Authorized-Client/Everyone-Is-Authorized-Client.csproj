@@ -1,0 +1,42 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>com.everyoneisauthorized.client</RootNamespace>
+    <ReleaseVersion>1.0.0</ReleaseVersion>
+    <PackageId>EveryoneIsAuthorized.Client</PackageId>
+    <Authors>Joel Mussman</Authors>
+    <Description>This library provides a credit card purchase payment authorizer that randomly decides (50/50). The class will only
+This library provides a credit card purchase payment authorizer that authorizes a payment 100% of the time, but
+only if the credit card number is a valid card number. If the class constructor is called without arguments
+it instantiates its own CreditCardValidator. If it is called with an ICardValidator instance it uses it. This allows for
+a demonstration of dependcy injection.
+
+Paired with the sister The Bank of Random Credit Authorizer both libraries create a scenario to demonstrate the problems
+of tightly coupling a class to a dependency, and using dependency injection and the Adapter Pattern to
+decouple the dependency and allow for test-doubles to be injected in their place.</Description>
+    <Copyright>Copyright © 2018-2021 Joel Mussman. All rights reserved.</Copyright>
+    <PackageIconUrl>https://github.com/jmussman/everyone-is-authorized-client-dotnet/logo.png</PackageIconUrl>
+    <PackageLicenseUrl>https://github.com/jmussman/everyone-is-authorized-client-dotnet/LICENSE.md</PackageLicenseUrl>
+    <Owners>Joel Mussman</Owners>
+    <PackageProjectUrl>https://github.com/jmussman/everyone-is-authorized-client-dotnet</PackageProjectUrl>
+    <PackageReleaseNotes>Initial release.</PackageReleaseNotes>
+    <Summary>A payment authorizer that authorizes 100% of the time.</Summary>
+    <Title>Everyone Is Authorized Client</Title>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DocumentationFile></DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType></DebugType>
+    <DocumentationFile>bin\Release\netcoreapp3.1\Everyone-Is-Authorized-Client.xml</DocumentationFile>
+    <DelaySign>false</DelaySign>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="Client\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="WonderfulWidgets.CreditCardValidator" Version="1.0.0" />
+  </ItemGroup>
+</Project>
