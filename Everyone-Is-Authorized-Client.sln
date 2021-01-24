@@ -29,7 +29,7 @@ Global
 		SolutionGuid = {80B559B6-F0AF-40C0-8D19-CA7386E9B726}
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
-		version = 1.0.3
+		version = 1.0.4
 		description = "@This library provides a credit card purchase payment authorizer that authorizes a payment 100% of the time, but only if the credit card number is a valid card number. If the class constructor is called without arguments it instantiates its own ICreditCardValidator. If it is called with an ICardValidator instance then it uses that. This scenario allows for a demonstration of dependcy injection without involving any other components.\n\nWhen paired with the sister project The Bank of Random Credit Authorizer both libraries may be used to create a scenario to demonstrate the problems of a tightly coupled dependency in a SalesOrderManager class. Use this to demonstrate dependency injection and the Adapter Pattern to decouple the authorization from the SalesOrderManager, and then allow for a test-double to be injected in their place.  To setup this scenario use the default constructor for each class and ignore the internal card validation. In a real application the classes would not share the same validator interface, they only do in these libraries to help in the first scenario. "
 	EndGlobalSection
 EndGlobal
