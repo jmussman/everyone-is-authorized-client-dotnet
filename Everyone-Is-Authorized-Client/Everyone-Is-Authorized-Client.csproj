@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <RootNamespace>com.everyoneisauthorized.client</RootNamespace>
-    <ReleaseVersion>1.0.3</ReleaseVersion>
+    <ReleaseVersion>1.0.4</ReleaseVersion>
     <PackageId>EveryoneIsAuthorized.Client</PackageId>
     <Authors>Joel Mussman</Authors>
     <Description>This library provides a credit card purchase payment authorizer that authorizes a payment 100% of the time, but only if the credit card number is a valid card number. If the class constructor is called without arguments it instantiates its own ICreditCardValidator. If it is called with an ICardValidator instance then it uses that. This scenario allows for a demonstration of dependcy injection without involving any other components.
@@ -14,10 +14,10 @@ When paired with the sister project The Bank of Random Credit Authorizer both li
     <PackageLicenseUrl>https://github.com/jmussman/everyone-is-authorized-client-dotnet/blob/master/LICENSE.md</PackageLicenseUrl>
     <Owners>Joel Mussman</Owners>
     <PackageProjectUrl>https://github.com/jmussman/everyone-is-authorized-client-dotnet</PackageProjectUrl>
-    <PackageReleaseNotes>Updated description.</PackageReleaseNotes>
+    <PackageReleaseNotes>Updated NuGet dependencies.</PackageReleaseNotes>
     <Summary>A payment authorizer that authorizes 100% of the time.</Summary>
     <Title>Everyone Is Authorized Client</Title>
-    <PackageVersion>1.0.3</PackageVersion>
+    <PackageVersion>1.0.4</PackageVersion>
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -45,7 +45,7 @@ When paired with the sister project The Bank of Random Credit Authorizer both li
     <Folder Include="Client\" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="WonderfulWidgets.CreditCardValidator" Version="1.0.0" />
+    <PackageReference Include="WonderfulWidgets.CreditCardValidator" Version="1.0.1" />
     <PackageReference Include="Vsxmd" Version="1.4.5">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
