@@ -3,9 +3,9 @@
 //
 
 using System;
-using com.wonderfulwidgets.retail;
+using OpenCardServices.Validator;
 
-namespace com.everyoneisauthorized.client {
+namespace EveryoneIsAuthorized.Client {
 
     /// <summary>
     /// Client interface to the credit card processing services for Everyone is Authorized.

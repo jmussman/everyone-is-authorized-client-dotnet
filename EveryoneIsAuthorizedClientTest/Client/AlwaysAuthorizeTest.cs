@@ -5,9 +5,9 @@
 using System;
 using Xunit;
 using Moq;
-using com.wonderfulwidgets.retail;
+using OpenCardServices.Validator;
 
-namespace com.everyoneisauthorized.client {
+namespace EveryoneIsAuthorized.Client {
 
     public class AlwaysAuthorizeTests {
 

@@ -1,25 +1,25 @@
 <a name='assembly'></a>
-# Everyone-Is-Authorized-Client
+# EveryoneIsAuthorizedClient
 
 ## Contents
 
-- [AlwaysAuthorize](#T-com-everyoneisauthorized-client-AlwaysAuthorize 'com.everyoneisauthorized.client.AlwaysAuthorize')
-  - [#ctor()](#M-com-everyoneisauthorized-client-AlwaysAuthorize-#ctor 'com.everyoneisauthorized.client.AlwaysAuthorize.#ctor')
-  - [#ctor(creditCardValidator)](#M-com-everyoneisauthorized-client-AlwaysAuthorize-#ctor-com-wonderfulwidgets-retail-ICreditCardValidator- 'com.everyoneisauthorized.client.AlwaysAuthorize.#ctor(com.wonderfulwidgets.retail.ICreditCardValidator)')
-  - [Authorize(amt,number)](#M-com-everyoneisauthorized-client-AlwaysAuthorize-Authorize-System-Double,System-String- 'com.everyoneisauthorized.client.AlwaysAuthorize.Authorize(System.Double,System.String)')
+- [AlwaysAuthorize](#T-EveryoneIsAuthorized-Client-AlwaysAuthorize 'EveryoneIsAuthorized.Client.AlwaysAuthorize')
+  - [#ctor()](#M-EveryoneIsAuthorized-Client-AlwaysAuthorize-#ctor 'EveryoneIsAuthorized.Client.AlwaysAuthorize.#ctor')
+  - [#ctor(creditCardValidator)](#M-EveryoneIsAuthorized-Client-AlwaysAuthorize-#ctor-OpenCardServices-Validator-ICreditCardValidator- 'EveryoneIsAuthorized.Client.AlwaysAuthorize.#ctor(OpenCardServices.Validator.ICreditCardValidator)')
+  - [Authorize(amt,number)](#M-EveryoneIsAuthorized-Client-AlwaysAuthorize-Authorize-System-Double,System-String- 'EveryoneIsAuthorized.Client.AlwaysAuthorize.Authorize(System.Double,System.String)')
 
-<a name='T-com-everyoneisauthorized-client-AlwaysAuthorize'></a>
+<a name='T-EveryoneIsAuthorized-Client-AlwaysAuthorize'></a>
 ## AlwaysAuthorize `type`
 
 ##### Namespace
 
-com.everyoneisauthorized.client
+EveryoneIsAuthorized.Client
 
 ##### Summary
 
 Client interface to the credit card processing services for Everyone is Authorized.
 
-<a name='M-com-everyoneisauthorized-client-AlwaysAuthorize-#ctor'></a>
+<a name='M-EveryoneIsAuthorized-Client-AlwaysAuthorize-#ctor'></a>
 ### #ctor() `constructor`
 
 ##### Summary
@@ -30,7 +30,7 @@ Create an authorizer using an instance of CreditCardValidator.
 
 This constructor has no parameters.
 
-<a name='M-com-everyoneisauthorized-client-AlwaysAuthorize-#ctor-com-wonderfulwidgets-retail-ICreditCardValidator-'></a>
+<a name='M-EveryoneIsAuthorized-Client-AlwaysAuthorize-#ctor-OpenCardServices-Validator-ICreditCardValidator-'></a>
 ### #ctor(creditCardValidator) `constructor`
 
 ##### Summary
@@ -41,9 +41,9 @@ Create an authorizer using a provided credit card validator.
 
 | Name | Type | Description |
 | ---- | ---- | ----------- |
-| creditCardValidator | [com.wonderfulwidgets.retail.ICreditCardValidator](#T-com-wonderfulwidgets-retail-ICreditCardValidator 'com.wonderfulwidgets.retail.ICreditCardValidator') | The ICreditCardValidator instance to use. |
+| creditCardValidator | [OpenCardServices.Validator.ICreditCardValidator](#T-OpenCardServices-Validator-ICreditCardValidator 'OpenCardServices.Validator.ICreditCardValidator') | The ICreditCardValidator instance to use. |
 
-<a name='M-com-everyoneisauthorized-client-AlwaysAuthorize-Authorize-System-Double,System-String-'></a>
+<a name='M-EveryoneIsAuthorized-Client-AlwaysAuthorize-Authorize-System-Double,System-String-'></a>
 ### Authorize(amt,number) `method`
 
 ##### Summary
